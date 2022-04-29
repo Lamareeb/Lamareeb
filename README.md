@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Lamareeb - Laura
+- 👋 Hi, I’m @Lamareeb 
 - 👀 I’m interested in Web Development.  Coldfusion applications.
 - 🌱 I’m currently learning anything I can to make an app or website better.
 - 💞️ I’m looking to collaborate on Coldfusion, CSS, JavaScript.
