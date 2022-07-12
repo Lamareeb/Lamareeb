@@ -1,7 +1,7 @@
-- 👋 Hi, I’m @Lamareeb 
-- 👀 I’m interested in Web Development.  I love creating Coldfusion applications.
-- 🌱 I’m currently learning anything I can to make an app or website better.
-- 💞️ I’m looking to collaborate on Coldfusion, CSS, JavaScript.
+- 👋 Hi, I’m @Lamaree
+- 👀 I’m interested in Web Development.  
+- 🌱 I love creating Coldfusion applications, and am currently learning anything I can to make an app or website better.
+- 💞️ I’m looking to collaborate on Coldfusion, CSS, JavaScript and anything web related.
 - 📫 How to reach me ...
 
 <!---
