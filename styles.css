@@ -395,9 +395,10 @@ footer p {
 .downArrow3 {
       height: 40px;
       width: 40px;
-      right: 50%;
-      margin-top: 50px;
+      right: 48%;
+      margin-top: 50px auto 10px auto;
       position: absolute;
+     
 }
 
 
@@ -427,12 +428,12 @@ body {
     margin-top:25px;
 }*/
 .welcome-section h1 {
-    font-size: 1.3em;
+    font-size: 1.6em;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
 .welcome-section h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 0.1em;
 }
@@ -475,7 +476,7 @@ body {
 .nav-link {
     
     float:right;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
  #skills {
     margin: auto;
