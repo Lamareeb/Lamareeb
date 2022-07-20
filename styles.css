@@ -614,5 +614,9 @@ body {
       text-decoration-style: solid;
       text-decoration-thickness: .1em;
       text-underline-offset: 2.5px;
+}
+#logo {
+    top: 3px;
+    left: 5px;
 }}
  /*   end small screen css */
