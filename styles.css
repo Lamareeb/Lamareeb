@@ -111,7 +111,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     width: 65%;
     margin: 75px auto 60px auto;
     background-color: rgb(42, 41, 41);
-    padding: 15px 25px 20px 25px;
+    padding: 15px 25px 25px 25px;
     border-radius: 5px;
     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
