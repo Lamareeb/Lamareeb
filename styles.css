@@ -472,10 +472,46 @@ body {
      display: flex;
      justify-content: flex-end;
 }
+#nav-bar{
+    display: flex;
+    flex-direction: column;
+    flex-flow:row wrap;
+    width: auto;
+    height: auto;
+    padding: 0;
+    top:0;
+    right:0;
+    left: 15px;
+    position: fixed;
+    z-index: 1;
+    padding: 0;
+}
 .nav-link {
     
     float:right;
     font-size: 0.8em;
+}
+.nav a.nav-link {
+    background-color:rgb(42, 41, 41);
+    color: rgb(250, 243, 243);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding: 15px;
+}
+.active, .nav a.nav-link:hover {
+    background-color: rgb(233, 227, 227);
+    color: rgb(7, 7, 7);
+    padding: 15px;
+    text-decoration-line: underline;
+    text-decoration-color: linear-gradient(to right,
+      rgb(227, 86, 25),
+      rgb(246, 91, 25), 
+      #bf1397, 
+      #e739be
+      ); 
+      text-decoration-style: solid;
+      text-decoration-thickness: .1em;
+      text-underline-offset: 2.5px;
 }
  #skills {
     margin: auto;
@@ -521,7 +557,19 @@ body {
 
 
 @media only screen and (max-width: 450px) {
-  
+  #navbar{
+      display: flex;
+      flex-direction: row;
+      flex-flow:row wrap;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      top:0;
+      left: 0;
+      right:0;
+      position: fixed;
+      z-index: 1;
+}
   #nav-bar{
       display: flex;
       flex-direction: column;
@@ -531,18 +579,40 @@ body {
       padding: 0;
       top:0;
       right:0;
-      left: 5px;
+      left: 15px;
       position: fixed;
       z-index: 1;
       padding: 0;
 }
 .nav {
      margin: 0;
-     min-width: 50px;
+     
      padding: 4px;
 }
 .nav-link {
-    min-width: 50px;
+    
     font-size: 0.8em;
+}
+.nav a.nav-link {
+    background-color:rgb(42, 41, 41);
+    color: rgb(250, 243, 243);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding: 14px;
+}
+.active, .nav a.nav-link:hover {
+    background-color: rgb(233, 227, 227);
+    color: rgb(7, 7, 7);
+    padding: 14px;
+    text-decoration-line: underline;
+    text-decoration-color: linear-gradient(to right,
+      rgb(227, 86, 25),
+      rgb(246, 91, 25), 
+      #bf1397, 
+      #e739be
+      ); 
+      text-decoration-style: solid;
+      text-decoration-thickness: .1em;
+      text-underline-offset: 2.5px;
 }}
  /*   end small screen css */
