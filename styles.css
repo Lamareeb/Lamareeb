@@ -111,7 +111,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     width: 60%;
     margin: 75px auto 60px auto;
     background-color: rgb(30, 29, 29);
-    padding: 15px 55px 20px 55px;
+    padding: 15px 55px 30px 55px;
     border-radius: 5px;
     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
@@ -131,6 +131,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     font-family: 'Roboto', sans-serif;
     color: white;
     letter-spacing: 0.1em;
+    line-height: 1.5;
 }
 #myDiv1 {
     width:40%;
