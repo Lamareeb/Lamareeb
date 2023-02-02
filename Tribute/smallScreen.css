@@ -1,0 +1,142 @@
+
+body{
+background-color: #2d2c32;    
+}
+.main  
+{
+width: 95%;
+padding-top:5px 10px 50px 10px;
+background-color:#292931 !important;
+margin: auto;
+display: flex;
+flex-direction: column;
+}
+.main a {
+    color: rgb(235, 235, 238);
+    text-decoration:underline;
+}
+.main > a:hover {
+    color: white;
+    text-decoration:underline;
+}
+#frame {
+    border: 2px black solid;
+    background-color: #303043;
+    padding:5px;
+}
+#img-div {
+    margin: auto;
+    max-width: 500px;
+    max-height: 520px ;
+    color:#d5d5d5;
+}
+/*style the carousel*/
+.carousel-inner img 
+{
+-webkit-filter:grayscale(90%);
+filter:grayscale(80%); /* make all photos black and white */
+width:100%; 
+margin:auto;
+background-color:#2d2d30;
+border: 2px black solid;
+}
+/* test under image slideshow h3 is above the circles, p is below */
+.img-caption h3 {
+    color:#d5d5d5 !important;
+    font-size: 1.0em;
+    letter-spacing:0.2em;
+    text-align:center;
+    display: none;
+}
+.img-caption p {
+    color:#d5d5d5 !important;
+    letter-spacing:0.1em;
+    font-size: 0.8em;
+    text-align:center;
+    display:none;
+}
+ul {
+text-align: left;
+width:100%;
+margin-top:20px;
+margin-right:5px;
+margin-bottom:20px;
+margin-left: 0;
+}
+li {
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color:#d5d5d5; 
+text-align:left;
+font-weight:lighter;
+padding:10px;
+letter-spacing:1.95px;
+margin-top:5px;
+margin-right:0px;
+margin-bottom: 5px;
+margin-left: 0;
+}
+#title {
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding-top: 25px;
+}
+#title h2 { /*Pat Metheny*/
+color:#d5d5d5; 
+text-align:center;
+letter-spacing:15.0px;
+font-size:25px;
+font-weight:500;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding-bottom:40px;     
+}
+#title h4 {
+color:#d5d5d5; 
+font-size: 15px;
+text-align:center;
+font-weight:lighter;
+letter-spacing:6.0px;
+padding-top:15px;
+padding-bottom:15px;
+}
+.main > h4 {
+    color: rgb(242, 243, 247);
+    font-weight:lighter;
+    text-align:center;
+    letter-spacing:6.0px;
+    font-size:1.1em;
+    margin-top: 20px;
+    margin-bottom:15px;
+}
+h4 {/*text under carousel---------*/
+color:#d5d5d5; 
+text-align:center;
+font-weight:lighter;
+letter-spacing:6.0px;
+padding-top:10px;
+padding-bottom:50px;
+}
+h3 {
+  color:#d5d5d5; 
+  text-align:center;
+  letter-spacing:7.0px;
+  font-size: 1em;
+}  
+footer {
+    background-color:#303043;
+    border-color:#000;
+    border-width:1px;
+    color:rgb(235, 235, 238);
+    padding:30px;
+    letter-spacing:2.5px;
+} 
+footer a {
+    color: rgb(235, 235, 238);
+    text-decoration: underline;
+    font-size: 1.1em;
+} 
+  footer a:hover {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.1em;
+    
+}   
+ 
