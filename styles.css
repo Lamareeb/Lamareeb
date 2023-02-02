@@ -1,65 +1,39 @@
 html {
     scroll-behavior: smooth;
+    height: -webkit-fill-available;
 }
 * {
     box-sizing: border-box;
 }
+
 body {
-     margin: 0;
-     padding: 0;
-     background-color: #2b2b2c;
-}
-#navbar{
-      display: flex;
-      flex-direction: row;
-      flex-flow:row wrap;
-      width: 100%;
-      height: auto;
-      padding: 0;
-      top:0;
-      left: 0;
-      right:0;
-      position: fixed;
-      z-index: 1;
-}
-.nav {
-    background-color: rgb(30, 29, 29);
-    list-style-type: none;
     margin: 0;
+    padding: 0;
+    background-color: #353537;
+    height: 100vh;
+    min-height: -webkit-fill-available;
+  } 
+:root {
+    --building-color1: #aa80ff;
+    --building-color2: #66cc99;
+    --building-color3: #cc6699;
+    --building-color4: #538cc6;
+    --window-color1: #bb99ff;
+    --window-color2: #8cd9b3;
+    --window-color3: #d98cb3;
+    --window-color4: #8cb3d9;
+  }
+
+  /*how to use the root colors */
+  .bb1d {
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: rgb(30, 30, 30) 2px solid;
-    border-top: rgb(30, 30, 30) 1px solid;
-}
-.nav-link {
-    font-family: 'Barlow', sans-serif;
-    float:right;
-    font-size: 1.1em;
-}
-.nav a.nav-link {
-    background-color:rgb(30, 29, 29);
-    color: rgb(250, 243, 243);
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    padding: 20px;
-}
-.active, .nav a.nav-link:hover {
-    background-color: rgb(233, 227, 227);
-    color: rgb(7, 7, 7);
-    padding: 20px;
-    text-decoration-line: underline;
-    text-decoration-color: linear-gradient(to right,
-      rgb(227, 86, 25),
-      rgb(246, 91, 25), 
-      #bf1397, 
-      #e739be
-      ); 
-      text-decoration-style: solid;
-      text-decoration-thickness: .1em;
-      text-underline-offset: 2.5px;
-}
+    height: 70%;
+    background: linear-gradient(
+        var(--building-color1) 50%,
+        var(--window-color1)
+      );
+  }  
+
 #logo {
     top: 5px;
     left: 5px;
@@ -69,7 +43,7 @@ body {
     padding: 0;
     position: absolute;
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     object-fit: cover;
     background-repeat: no-repeat;
 }
@@ -80,19 +54,25 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    margin-top: 10px;
+    margin-top: 0;
 
-background: -webkit-linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
-background: -moz-linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
+  
+background: -webkit-linear-gradient(to bottom right, rgba(250, 90, 4, 0.966)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
+background: -moz-linear-gradient(to bottom right, rgba(250, 90, 4, 0.755)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
 background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
+
 }
-.testColor {
-  background-image: linear-gradient(to bottom right, 
-  rgb(250, 90, 4, 0.5) 26.48%, 
-  rgb(242, 20, 242, 0.5) 73.52%);
-  height: 100px;
-  width: 300px;
-}
+/* text fade in  */
+.fade-in-text {
+    font-family: Arial;
+    font-size: 60px;
+    text-align: center;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
 .welcome-section h1 {
     font-size: 3.0em;
     font-family: 'Roboto', sans-serif;
@@ -106,18 +86,29 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     color: white;
     font-weight: bold;
     letter-spacing: 0.2em;
-}
+    
+    /*animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }*/
+    }
+
 .about {
-    width: 60%;
+    width: 65%;
     margin: 75px auto 60px auto;
-    background-color: rgb(30, 29, 29);
-    padding: 15px 55px 30px 55px;
-    border-radius: 5px;
-    box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
-    -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
+    
+    padding: 15px 55px 40px 55px;
+   
 }
 .about h3 {
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-family: 'Roboto', sans-serif;
     color: rgb(239, 63, 193);
     font-weight: bolder;
@@ -133,17 +124,38 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     letter-spacing: 0.1em;
     line-height: 1.5;
 }
-#myDiv1 {
-    width:40%;
-    height: 475px;
-    padding: 5px 10px 20px 20px;
-    margin: 30px auto 30px auto;
-    text-align: left;
+
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .divDecoration {
     background-color: rgb(41, 39, 40);
-    border-bottom: 10px solid #EF1261;
     border-image: linear-gradient(to right, 
     rgb(250, 90, 4, .3), rgb(242, 20, 242, .3)
   ); 
+    border-bottom: 10px solid transparent; 
     border-image-slice: 1;
     color: rgb(242, 245, 247);
     border-radius: 5px;
@@ -152,8 +164,8 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     letter-spacing: 0.1em;
     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
-}
-#myDiv2 {
+  }
+.myDiv {
     width: 40%;
     height: 475px;
     padding: 5px 10px 20px 20px;
@@ -173,9 +185,15 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
 }
+.myDiv > ul > li > a:link,a:visited,a:hover {
+    color:greenyellow;
+    font-size:
+    1.1em;
+}
+
 #skills {
     margin: auto;
-    width: 100%;
+    width: 85%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -215,23 +233,14 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     font-family: 'Roboto', sans-serif;
     margin-top: 5px;
 }
-.colortester { background-color: #161516;}
-
-.certifications {
-    width: 50%;
-    height: 350px;
-    margin: 150px auto 50px auto;
-    background-color: rgb(30, 29, 29);
-    border-bottom: 10px solid transparent;
-    border-radius: 5px;
-    border-image: linear-gradient(to right, 
-    rgb(250, 90, 4, 0.3), rgb(242, 20, 242, 0.3)
-  ); 
-    border-image-slice: 1;
-    box-shadow: 7px 7px 7px 2px rgb(24, 23, 23);
-    padding-bottom: 150px;
+.info {
+    width: 65%;
+    height: auto;
+    margin:auto;
+    padding: 20px 20px 60px 20px;
+   
 }
-.certifications h2 {
+.info h2 {
     font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
     color: rgb(239, 63, 193);
@@ -239,7 +248,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     letter-spacing: 0.1em;
     padding-top: 40px;
 }
-.certifications > p {
+.info > p {
     font-size: 0.9em;
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -248,11 +257,11 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     margin-left: 20px;
     margin-top: 40px;  
 }
-.certifications ul {
+.info ul {
    margin-top: 40px;;
    list-style-type: disc;
 }
-.certifications li {
+.info li {
     font-size: 0.9em;
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -305,14 +314,17 @@ hr.line {
     font-family:'Roboto', sans-serif;
 }
  /* Style the footer */
- footer {
-    background-color:  rgb(141, 39, 113);
-    padding: 20px;
+footer {
+    background-color:  rgb(144, 38, 131);
+    padding: 60px 20px 40px 20px;
     text-align: center;
     color: rgb(238, 232, 232);
     bottom:0;
     left: 0;
+    right:0;
     width: 100%;
+    opacity: 0.9;
+    position: relative;
 }
 footer a {
     text-decoration: none;
@@ -328,6 +340,15 @@ footer p {
     color: white;
     font-weight: bold;
     letter-spacing: 0.1em;
+    padding-bottom: 100px;
+}
+.fcontent {
+    font-size: 1.1em;
+    font-family:  'Roboto', sans-serif;
+    color: rgb(106, 245, 13);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding-bottom: 25px;
 }
 .dot {
     height: 3.5px;
@@ -338,39 +359,39 @@ footer p {
     vertical-align: middle;
 }
 .twitter {
-      height: 40px;
-      width: 45px;
+      height: 50px;
+      width: 55px;
       margin: 10px;
 }
 .ph {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       margin: 10px;
 }
 .email {
     
-      height: 40px;
-      width: 40px;
+      height: 50px;
+      width: 50px;
       margin: 10px;
 }
 .portfolio {
-      height: 40px;
-      width: 40px;
+      height: 50px;
+      width: 50px;
       margin: 10px;
 }
 .github {
-      height: 40px;
-      width: 40px;
+      height: 50px;
+      width: 50px;
       margin: 10px;
 }
 .codepen {
-      height: 40px;
-      width: 40px;
+      height: 50px;
+      width: 50px;
       margin: 10px;
 }
 .fcc {
-     height: 33px;
-     width: 40px;
+     height: 43px;
+     width: 50px;
      margin: 10px;
 }
 .arrows {
@@ -403,108 +424,124 @@ footer p {
 
 
 
+
+
+
+
 /*----------  small screen css  -------------------------------------- */
 @media only screen and (max-width: 600px) {
  
-body {
-   margin: auto;
-   display: flex;
-   flex-direction: column;
-}
-  #logo {
+ body {
+        margin: 0;
+        padding: 0;
+        background-color: #353537;
+        height: 100vh;
+        min-height: -webkit-fill-available;
+} 
+
+ #logo {
     top: 0px;
     left: 5px;
     height:45px;
     width:55px;
     padding-right: 10px;
 }
- /* .welcome-section {
+.welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50vh;
-    margin-top:25px;
-}*/
+    height: 100vh;
+    margin-top: 0;
+}
 .welcome-section h1 {
-    font-size: 1.3em;
+    font-size: 1.7em;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
 .welcome-section h2 {
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: bold;
     letter-spacing: 0.1em;
 }
 .about {
     width: 85%;
-    margin: 20px auto 40px auto;
+    margin: 20px auto 75px auto;
+    
+    
 }
+
 .about > h3 {
     font-size: 1.1em;
     padding-bottom: 20px;
-   
 }
-#nav-bar{
-      display: flex;
-      flex-direction: row;
-      flex-flow:row wrap;
-      width: 100%;
-      height: auto;
-      padding: 0;
-      top:0;
-      left: 0;
-      right:0;
-      position: fixed;
-      z-index: 1;
-      padding: 0;
-}
-.nav {
-     display: flex;
-     flex-direction: row;
-     flex-flow:row wrap;
-     
-     list-style-type: none;
-     margin: 0;
-     width: 100%;
-     padding: 7px;
-     list-style-type: none;
-     display: flex;
-     justify-content: flex-end;
-}
-.nav-link {
-    
-    float:right;
-    font-size: 0.9em;
-}
+
  #skills {
     margin: auto;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
  }
-#myDiv1 {
+ .myDiv {
+    width:85%;
+    height: auto;
+    min-height: 500px;
+    padding: 5px 10px 40px 20px;
+    margin: 30px auto 30px auto;
+    text-align: left;
+ 
+    background-color: rgb(41, 39, 40);
+     border-image: linear-gradient(to right, 
+     rgb(250, 90, 4, .3), rgb(242, 20, 242, .3)
+   ); 
+     border-bottom: 10px solid transparent; 
+     border-image-slice: 1;
+     color: rgb(242, 245, 247);
+     border-radius: 5px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 1.0em;
+     letter-spacing: 0.1em;
+     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
+     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
+ 
+ }
+.myDiv2 {
    width:85%;
-   height: 300px;
-   padding: 5px 10px 20px 20px;
+   height: auto;
+   min-height: 500px;
+   padding: 5px 10px 40px 20px;
    margin: 30px auto 30px auto;
    text-align: left;
+
+   background-color: rgb(41, 39, 40);
+    border-image: linear-gradient(to right, 
+    rgb(250, 90, 4, .3), rgb(242, 20, 242, .3)
+  ); 
+    border-bottom: 10px solid transparent; 
+    border-image-slice: 1;
+    color: rgb(242, 245, 247);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    letter-spacing: 0.1em;
+    box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
+    -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
+
 }
-#myDiv2 {
+
+.info {
     width: 85%;
-    height: 450px;
-    padding: 5px 10px 20px 20px;
-    text-align: left;
-    margin: 30px auto 30px auto;
-}
-.certifications {
-    width: 85%;
-    height:350px;
-    margin: 50px auto 50px auto;
+    padding: 20px 10px 60px 10px;
+    margin: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
+    -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
+    
 }
 .project-tile {
     margin: 150px auto 150px auto;
@@ -520,7 +557,7 @@ body {
     font-size: 1.0em;
 }}
 
-
+/*
 @media only screen and (max-width: 450px) {
   
   #nav-bar{
@@ -545,4 +582,7 @@ body {
     min-width: 50px;
     font-size: 0.8em;
 }}
+*/
  /*   end small screen css */
+
+ 
