@@ -5,34 +5,19 @@ html {
 * {
     box-sizing: border-box;
 }
-
+:root {
+    --font-light: rgb(255, 248, 248);
+    --head-pink: rgb(239, 63, 193);
+    --divBG: rgb(41, 39, 40);
+}
 body {
     margin: 0;
     padding: 0;
-    background-color: #353537;
+    background-color: #4c4c4e;
     height: 100vh;
     min-height: -webkit-fill-available;
   } 
-:root {
-    --building-color1: #aa80ff;
-    --building-color2: #66cc99;
-    --building-color3: #cc6699;
-    --building-color4: #538cc6;
-    --window-color1: #bb99ff;
-    --window-color2: #8cd9b3;
-    --window-color3: #d98cb3;
-    --window-color4: #8cb3d9;
-  }
 
-  /*how to use the root colors */
-  .bb1d {
-    width: 100%;
-    height: 70%;
-    background: linear-gradient(
-        var(--building-color1) 50%,
-        var(--window-color1)
-      );
-  }  
 
 #logo {
     top: 5px;
@@ -55,14 +40,12 @@ body {
     width: 100%;
     height: 100vh;
     margin-top: 0;
-
   
 background: -webkit-linear-gradient(to bottom right, rgba(250, 90, 4, 0.966)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
 background: -moz-linear-gradient(to bottom right, rgba(250, 90, 4, 0.755)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
 background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%, rgb(242, 20, 242, 0.5) 73.52%);
 
 }
-/* text fade in  */
 .fade-in-text {
     font-family: Arial;
     font-size: 60px;
@@ -101,16 +84,14 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     }
 
 .about {
-    width: 65%;
+    width: 60%;
     margin: 75px auto 60px auto;
-    
     padding: 15px 55px 40px 55px;
-   
 }
 .about h3 {
     font-size: 1.8em;
     font-family: 'Roboto', sans-serif;
-    color: rgb(239, 63, 193);
+    color: var(--head-pink);
     font-weight: bolder;
     text-align: center;
     letter-spacing: 0.1em;
@@ -120,7 +101,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 .about > p {
     font-size: 1.0em;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: var(--font-light);
     letter-spacing: 0.1em;
     line-height: 1.5;
 }
@@ -151,13 +132,14 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     100% { opacity: 1; }
   }
   .divDecoration {
-    background-color: rgb(41, 39, 40);
+    background-color: var(--divBG);
+   
     border-image: linear-gradient(to right, 
     rgb(250, 90, 4, .3), rgb(242, 20, 242, .3)
   ); 
     border-bottom: 10px solid transparent; 
     border-image-slice: 1;
-    color: rgb(242, 245, 247);
+    color: var(--font-light);
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.0em;
@@ -165,11 +147,15 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
   }
+  .divDecoration h2,h3 {
+    color: var(--head-pink);
+  }
 .myDiv {
     width: 40%;
-    height: 475px;
-    padding: 5px 10px 20px 20px;
+    height: auto;
+    padding: 5px 10px 40px 20px;
     margin: 30px auto 30px auto;
+    flex-direction: row;
     text-align: left;
     background-color: rgb(41, 39, 40);
     border-image: linear-gradient(to right, 
@@ -177,13 +163,19 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
   ); 
     border-bottom: 10px solid transparent; 
     border-image-slice: 1;
-    color: rgb(242, 245, 247);
+    color: var(--font-light);
+    
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.0em;
     letter-spacing: 0.1em;
     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
+}
+.myDiv h2 {
+    color: var(--head-pink);
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
 }
 .myDiv > ul > li > a:link,a:visited,a:hover {
     color:greenyellow;
@@ -194,18 +186,18 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 #skills {
     margin: auto;
     width: 85%;
-    height: 100%;
+    padding: 30px 30px;
     display: flex;
     flex-direction: row;
 }
 #skills h2 {
     font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
-    color: rgb(239, 63, 193);
+    color: var(--head-pink);
     font-weight: bold;
     text-align: left;
     margin-left: 20px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 #skills h3 {
     font-size: 1.1em;
@@ -215,38 +207,38 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 #skills p {
     font-size: 0.9em;
     font-family: 'Roboto', sans-serif;
-    color: rgb(236, 231, 231);
+    color: var(--font-light);
     text-align: left;
     margin-left: 20px;
     
 }
 #skills ul {
-   font-size: 0.9em;
-   color: white;
    margin-top: 10px;
    margin-bottom: 10px;
    list-style-type: disc;
    letter-spacing: 0.1em;
 }
 #skills li {
+    color: var(--font-light);
     font-size: 1.0em;
     font-family: 'Roboto', sans-serif;
     margin-top: 5px;
 }
 .info {
-    width: 65%;
+    width: 60%;
     height: auto;
-    margin:auto;
-    padding: 20px 20px 60px 20px;
+    margin: 100px auto;
+    padding: 20px 20px 40px 20px;
    
 }
 .info h2 {
     font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
-    color: rgb(239, 63, 193);
+    color: var(--head-pink);
     text-align: center;
     letter-spacing: 0.1em;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .info > p {
     font-size: 0.9em;
@@ -258,13 +250,16 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     margin-top: 40px;  
 }
 .info ul {
-   margin-top: 40px;;
+   margin-top: 20px auto;
+   width: 65%;
+   margin: auto;
    list-style-type: disc;
+   
 }
 .info li {
-    font-size: 0.9em;
+    font-size: 1.0em;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: var(--font-light);
     letter-spacing: 0.1em;
     margin-top: 5px;
     margin-top: 10px;
@@ -307,7 +302,7 @@ hr.line {
     width: 100%;
     padding: 40px 5px 5px 5px;
     font-size: 1.3em;
-    color: rgb(239, 63, 193);
+    color: var(--head-pink);
     text-align: center;
     margin: 5px auto 25px auto;
     letter-spacing: 0.1em;
@@ -326,14 +321,7 @@ footer {
     opacity: 0.9;
     position: relative;
 }
-footer a {
-    text-decoration: none;
-    color: rgb(238, 232, 232);
-}
-footer a:hover {
-    color: white;
-    text-decoration: none;
-}
+
 footer p {
     font-size: 1.3em;
     font-family:  'Roboto', sans-serif;
@@ -341,6 +329,14 @@ footer p {
     font-weight: bold;
     letter-spacing: 0.1em;
     padding-bottom: 100px;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(238, 232, 232);
+}
+footer a:hover {
+    color: rgb(101, 246, 34);
+    text-decoration: none;
 }
 .fcontent {
     font-size: 1.1em;
@@ -360,12 +356,12 @@ footer p {
 }
 .twitter {
       height: 50px;
-      width: 55px;
+      width: 58px;
       margin: 10px;
 }
 .ph {
-      height: 40px;
-      width: 40px;
+      height: 50px;
+      width: 50px;
       margin: 10px;
 }
 .email {
@@ -429,15 +425,7 @@ footer p {
 
 
 /*----------  small screen css  -------------------------------------- */
-@media only screen and (max-width: 600px) {
- 
- body {
-        margin: 0;
-        padding: 0;
-        background-color: #353537;
-        height: 100vh;
-        min-height: -webkit-fill-available;
-} 
+@media only screen and (max-width: 740px) {
 
  #logo {
     top: 0px;
@@ -465,17 +453,21 @@ footer p {
     font-weight: bold;
     letter-spacing: 0.1em;
 }
+
+
+
 .about {
     width: 85%;
     margin: 20px auto 75px auto;
-    
-    
 }
 
 .about > h3 {
     font-size: 1.1em;
     padding-bottom: 20px;
 }
+
+
+
 
  #skills {
     margin: auto;
@@ -487,10 +479,10 @@ footer p {
     flex-direction: column;
  }
  .myDiv {
-    width:85%;
+    width:50%;
     height: auto;
     min-height: 500px;
-    padding: 5px 10px 40px 20px;
+    padding: 10px 10px 40px 20px;
     margin: 30px auto 30px auto;
     text-align: left;
  
@@ -534,10 +526,11 @@ footer p {
 }
 
 .info {
-    width: 85%;
+    width: 75%;
     padding: 20px 10px 60px 10px;
-    margin: auto;
-    height: auto;
+    margin: 100px auto;
+    height: 
+    auto;
     border-radius: 5px;
     box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
     -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
