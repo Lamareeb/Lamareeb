@@ -15,6 +15,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
  <!---link for envelope in Contact section--->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+<!--- smooth scrolling ------------------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JQuery Script -->
+
+
+
 <link rel="stylesheet" type="text/css" href="styles.css">
 <link rel="stylesheet" type="text/css" href="menu.css">
 </head>
@@ -24,15 +30,15 @@
   <header class="header">
     <a href="index.html"><img src="images/logo7.png" alt="logo" id="logo"></a>
         <a href="" class="logo"></a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <input class="menu-btn toggler" type="checkbox" id="menu-btn" />
 
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
                 <ul class="menu">
-                  <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                      <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                  <li><a onclick="test()" href="index.html">Home</a></li>
+                    <li><a onclick="test()" href="#about">About</a></li>
+                      <li><a onclick="test()" href="#projects">Projects</a></li>
+                        <li><a onclick="test()" href="#contact">Contact</a></li>
                 </ul>
 
   </header>
@@ -49,7 +55,7 @@
                              
  
 <div class="about divDecoration" id="about" onmouseover="boxChange(this)" onmouseleave="boxChangeBack(this)">
-  <h3>Welcome</h3>
+  <h2>Welcome</h2>
     <p>
         I'm a web developer based in the United States. I have 6+ years of experience working 
         on all phases of the web development life cycle, from working with clients - helping them 
@@ -57,7 +63,7 @@
         after go-live. 
     </p>
     <p> 
-        Before becoming a Web Developer I built & fixed computers, provided network & software tech support, manned
+        Before becoming a Web Developer I provided network & software tech support, built & fixed computers, manned
         the help desk when needed, and was a teaching assistant at University, where I studied in the (AIT) Applied
         Information Technology program. I'm versatile and am always learning something new.
     </p>
@@ -95,10 +101,11 @@
 
        <h2 id="h2">Web Technologies</h2>
           <ul>
+            <li>UX/UI</li>
             <li>CSS3</li>
             <li>HTML5</li>
-            <li>UX/UI</li>
             <li>Bootstrap</li>
+            <li>jQuery</li>
             <li>Web Accessibility</li>
            </ul>
          
@@ -128,7 +135,7 @@
 --->
 
 <div>
- <div class="info divDecoration"   onmouseover="boxChange(this)" onmouseleave="boxChangeBack(this)">
+ <div class="info divDecoration" onmouseover="boxChange(this)" onmouseleave="boxChangeBack(this)">
       <h2>People Stuff</h2>
           <ul>
             <li>Help Desk</li>
@@ -142,8 +149,10 @@
 
  
 
-  <div class="project-tile" id="projects">
-        <h4 class="project-tile">Tribute Page Project</h4>
+  <div class="project-tile projects" id="projects">
+
+        <h2>Tribute Page Project</h2>
+
       <a href="Tribute/index.html"><img src="tribute.png" alt="Pat Metheny Tribute Page"></a>
      </div><!--- close project-tile--->
 
@@ -152,19 +161,51 @@
         
 
 
-<footer id="contact">
-<p>Let me help you create your online presence</p>
-   <!--- <a href="#">
-        <img src="images/portfolio.png" 
-           class="portfolio"
-           alt="link to portfolio" 
-           title="View my portfolio"
-           tooltip="View my portfolio">
-    </a>
---->
-<div class="fcontent" >
-&copy;&nbsp;LamareeB - Web Developer - Contact Me
-</div>
+
+
+
+
+<!--- scroll to top button ----------------------------------------------------->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+
+<script>
+// Get the button:
+let mybutton = document.getElementById("myBtn");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+<!--- end scroll to top ------------------------------------------->
+
+
+
+
+
+<footer id="contact" class="contact">
+      <p>Let me help you create your online presence</p>
+        <!--- <a href="#">
+              <img src="images/portfolio.png" 
+                class="portfolio"
+                alt="link to portfolio" 
+                title="View my portfolio"
+                tooltip="View my portfolio">
+          </a>
+            --->
+            <div class="fcontent" >
+            &copy;&nbsp;LamareeB - Web Developer - Contact Me
+            </div>
 
 <div>
   <a href="tel:443-585-2221">  
@@ -216,8 +257,117 @@
     </a> --->
   </footer>
 
+
+
+
+
+<!---smooth scrolling ------------------------------>
+<script>
+  // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top 
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+  </script>
+<!-------------->
+
+
+
+
+
+
+
+
+<!--- close menu after click ---------------------------->
+<script>
+  // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
+
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<!--- close menu after item selection --->
+<script>
+  function test(){
+    $(".toggler").prop("checked", false);
+}
+</script>
+<!--- close the close on click ----------------------------------------------------------->
+
 </body>
 </html>
+
+
+
+
+
+
+
 
 <!--- Need two funtions to change properties of the div and back again --->
 <script>// switch to this css on hover/click
