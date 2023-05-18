@@ -191,7 +191,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     1.1em;
 }
 
-#skills {
+.skills {
     margin: auto;
     width: 85%;
     padding: 30px 30px;
@@ -490,7 +490,7 @@ footer a:hover {
 
 .about {
     width: 85%;
-    margin: 20px auto 75px auto;
+    margin: 20px auto 50px auto;
 }
 
 .about > h3 {
@@ -499,17 +499,20 @@ footer a:hover {
 }
 
 
- #skills {
-    margin: auto;
+
+
+
+ .skills {
+    margin: 20px auto;
     padding-top: 40px;
     padding-bottom: 100px;
-    width: 100%;
+    width: 85%;
     height: auto;
     display: flex;
     flex-direction: column;
  }
  .myDiv {
-    width:50%;
+    width:85%;
     height: auto;
     min-height: 500px;
     padding: 10px 10px 40px 20px;
