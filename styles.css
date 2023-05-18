@@ -9,6 +9,7 @@ html {
     --font-light: rgb(255, 248, 248);
     --head-pink: rgb(239, 63, 193);
     --divBG: rgb(41, 39, 40);
+    --positionSVG:  calc(100vw / 2 - 50%); 
 }
 body {
     margin: 0;
@@ -56,6 +57,35 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     -o-animation: fadeIn 5s;
     -ms-animation: fadeIn 5s;
   }
+  
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+
 .welcome-section h1 {
     font-size: 3.0em;
     font-family: 'Roboto', sans-serif;
@@ -85,7 +115,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 
 .about {
     width: 60%;
-    margin: 75px auto 60px auto;
+    margin: 75px auto 1px auto;
     padding: 20px 55px 40px 55px;
     scroll-margin-top: 50px;
 }
@@ -108,30 +138,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 }
 
   
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+ 
   .divDecoration {
     background-color: var(--divBG);
    
@@ -229,7 +236,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 .info {
     width: 60%;
     height: auto;
-    margin: 100px auto;
+    margin: 50px auto 1px auto;
     padding: 20px 20px 40px 20px;
    
 }
@@ -289,6 +296,7 @@ hr.line {
 
 .projects {
    scroll-margin-top: 100px;
+   
   
 }
 .projects h2 {
@@ -622,3 +630,16 @@ footer a:hover {
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+
+  svg {
+     /* a perfectly square <svg> element that will never overflow the viewport */
+  width: 90vmin;
+  height: 30vmin;
+  padding: 0;
+  }
+  
+  
+.mySVG {
+    padding: 0;
+}
