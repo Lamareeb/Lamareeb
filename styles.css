@@ -87,11 +87,12 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 
 
 .welcome-section h1 {
-    font-size: 3.0em;
+    font-size: 3.5em;
     font-family: 'Roboto', sans-serif;
     color: white;
     font-weight: bold;
     letter-spacing: 0.3em;
+    padding-bottom: 20px;
 }
 .welcome-section h2 {
     font-size: 2.0em;
@@ -99,6 +100,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     color: white;
     font-weight: bold;
     letter-spacing: 0.2em;
+    padding-top: 20px;
     
     /*animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
@@ -184,17 +186,23 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     color: var(--head-pink);
     font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
+    padding-bottom: 15px;
 }
+.myDiv li {
+    padding-bottom: 5px;
+}
+
+/*
 .myDiv > ul > li > a:link,a:visited,a:hover {
     color:greenyellow;
     font-size:
     1.1em;
 }
-
+/*/
 .skills {
     margin: auto;
     width: 85%;
-    padding: 30px 30px;
+    padding: 30px 5px;
     display: flex;
     flex-direction: row;
     scroll-margin-top: 50px;
@@ -237,7 +245,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     width: 60%;
     height: auto;
     margin: 50px auto 1px auto;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 5px 40px 5px;
    
 }
 .info h2 {
@@ -260,7 +268,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 }
 .info ul {
    margin-top: 20px auto;
-   width: 65%;
+   width: 85%;
    margin: auto;
    list-style-type: disc;
    
@@ -476,12 +484,12 @@ footer a:hover {
     margin-top: 0;
 }
 .welcome-section h1 {
-    font-size: 1.7em;
+    font-size: 2.5em;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
 .welcome-section h2 {
-    font-size: 1.8em;
+    font-size:1.5em;
     font-weight: bold;
     letter-spacing: 0.1em;
 }
@@ -490,9 +498,13 @@ footer a:hover {
 
 .about {
     width: 85%;
-    margin: 20px auto 50px auto;
+   margin: 20px auto 50px auto;
+   padding: 25px 20px 40px 25px;
 }
-
+.about > h2 {
+    font-size: 2.0em;
+    padding: 20px auto;
+}
 .about > h3 {
     font-size: 1.1em;
     padding-bottom: 20px;
@@ -512,7 +524,7 @@ footer a:hover {
     flex-direction: column;
  }
  .myDiv {
-    width:85%;
+    width:80%;
     height: auto;
     min-height: 500px;
     padding: 10px 10px 40px 20px;
@@ -534,33 +546,10 @@ footer a:hover {
      -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
  
  }
-.myDiv2 {
-   width:85%;
-   height: auto;
-   min-height: 500px;
-   padding: 5px 10px 40px 20px;
-   margin: 30px auto 30px auto;
-   text-align: left;
-
-   background-color: rgb(41, 39, 40);
-    border-image: linear-gradient(to right, 
-    rgb(250, 90, 4, .3), rgb(242, 20, 242, .3)
-  ); 
-    border-bottom: 10px solid transparent; 
-    border-image-slice: 1;
-    color: rgb(242, 245, 247);
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.0em;
-    letter-spacing: 0.1em;
-    box-shadow: 7px 7px 7px 2px rgb(24, 23, 23),
-    -10px 8px 15px rgb(24, 23, 23), 10px 8px 15px rgb(24, 23, 23);
-
-}
 
 .info {
     width: 75%;
-    padding: 20px 10px 60px 10px;
+    padding: 20px 5px 60px 5px;
     margin: 100px auto;
     height: 
     auto;
@@ -646,3 +635,7 @@ footer a:hover {
 .mySVG {
     padding: 0;
 }
+/*  carousel styles */
+.centerThePic {
+    margin: auto;
+  }
