@@ -48,8 +48,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 
 }
 .fade-in-text {
-    font-family: Arial;
-    font-size: 60px;
+    
     text-align: center;
     animation: fadeIn 5s;
     -webkit-animation: fadeIn 5s;
@@ -87,12 +86,14 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 
 
 .welcome-section h1 {
-    font-size: 3.5em;
-    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+    letter-spacing: 20px;
+    font-family: 'Quicksand', sans-serif;
     color: white;
-    font-weight: bold;
-    letter-spacing: 0.3em;
+    
     padding-bottom: 20px;
+    padding-top: 100px;
+   
 }
 .welcome-section h2 {
     font-size: 2.0em;
@@ -114,6 +115,21 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
     opacity: 1;
     }*/
     }
+/* style my image - good grief get a better pic lol */
+    .img {
+        height: 100px;
+        width: 100px;
+        background-image: url(images/Lamaree5.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgb(227, 227, 232);
+        border-radius: 50%;
+        border: 1px solid black;
+        margin: 70px auto auto auto;
+      }
+
+
 
 .about {
     width: 60%;
@@ -283,7 +299,7 @@ background-image: linear-gradient(to bottom right, rgb(250, 90, 4, 0.6)  26.48%,
 hr {
   width: 75%;
   height: 2.0px;
-  color: white;
+  
   background-color: white;
 
 }
@@ -522,6 +538,7 @@ footer a:hover {
     width:55px;
     padding-right: 10px;
 }
+
 .welcome-section {
     display: flex;
     flex-direction: column;
@@ -531,6 +548,7 @@ footer a:hover {
     height: 100vh;
     margin-top: 0;
 }
+
 .welcome-section h1 {
     font-size: 2.5em;
     font-weight: bold;
@@ -648,5 +666,3 @@ footer a:hover {
 }}
 */
  /*   end small screen css */
-
- 
