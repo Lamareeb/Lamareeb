@@ -645,30 +645,3 @@ footer a:hover {
 }
 
 
-/*
-@media only screen and (max-width: 450px) {
-  
-  #nav-bar{
-      display: flex;
-      flex-direction: column;
-      flex-flow:row wrap;
-      width: auto;
-      height: auto;
-      padding: 0;
-      top:0;
-      right:0;
-      position: fixed;
-      z-index: 1;
-      padding: 0;
-}
-.nav {
-     margin: 0;
-     min-width: 50px;
-     padding: 4px;
-}
-.nav-link {
-    min-width: 50px;
-    font-size: 0.8em;
-}}
-*/
- /*   end small screen css */
