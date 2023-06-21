@@ -11,6 +11,12 @@ html {
     --divBG: rgb(41, 39, 40);
     --positionSVG:  calc(100vw / 2 - 50%); 
 }
+  *:focus {
+    outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
